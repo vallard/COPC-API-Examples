@@ -1,4 +1,4 @@
-- name: launch one nova instance
+- name: launch one openstack instance
   connection: local
   hosts: local
   gather_facts: false  
@@ -14,8 +14,10 @@
       login_username: "{{ lookup('env', 'OS_USERNAME') }}"
       login_password: "{{ lookup('env', 'OS_PASSWORD') }}"
       login_tenant_name: "{{ lookup('env', 'OS_TENANT_NAME') }}"
-      name: demo-server
-      image_name: ubuntu-14.04-server
-      key_name: chompkey
+      name: ansible-server
+      # run nova image-list to get an image and put its id below. 
+      image_name: 
+      # fill in your key name here
+      key_name: 
       flavor_id: 3 
       security_groups: default
