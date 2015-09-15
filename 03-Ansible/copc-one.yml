@@ -17,12 +17,7 @@
       name: demo-server
       image_id: "{{ coreos_image_id }}"
       key_name: "{{ keypair }}"
-      #m1.small is 5
-      #m1.medium is id 1
-      flavor_id: 1 
-      #auto_floating_ip: yes
+      flavor_id: 3 
       security_groups: "{{ security_group }}"
-      floating_ip_pools:
-      - "{{ floating_ip_pool }}"
       wait_for: 200
     register: instance
