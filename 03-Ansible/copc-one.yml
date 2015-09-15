@@ -15,9 +15,7 @@
       login_password: "{{ lookup('env', 'OS_PASSWORD') }}"
       login_tenant_name: "{{ lookup('env', 'OS_TENANT_NAME') }}"
       name: demo-server
-      image_id: "{{ coreos_image_id }}"
-      key_name: "{{ keypair }}"
+      image_name: ubuntu-14.04-server
+      key_name: chompkey
       flavor_id: 3 
-      security_groups: "{{ security_group }}"
-      wait_for: 200
-    register: instance
+      security_groups: default
