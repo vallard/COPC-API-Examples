@@ -16,7 +16,7 @@
       login_tenant_name: "{{ lookup('env', 'OS_TENANT_NAME') }}"
       name: ansible-server
       # run nova image-list to get an image and put its id below. 
-      image_name: 
+      image_id: 
       # fill in your key name here
       key_name: 
       flavor_id: 3 
