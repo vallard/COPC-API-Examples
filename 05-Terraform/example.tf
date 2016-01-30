@@ -12,4 +12,5 @@ resource "openstack_compute_instance_v2" "test-server" {
   }
   key_pair = "tco-gold"
   security_groups = ["default"]
+  user_data = "${file('startmining.sh')}"
 }
